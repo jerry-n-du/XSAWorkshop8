@@ -1,0 +1,15 @@
+namespace XSAWorkshop8.db;
+
+context tables {
+
+    /*@@layout{"layoutInfo":{"x":-89,"y":-84.5}}*/
+    entity world {
+        key continent : String(100);
+    };
+
+    /*@@layout{"layoutInfo":{"x":-308,"y":-151.5}}*/
+    entity country {
+        name   : String(100);
+        partof : association[0..1] to tables.world { continent };
+    };
+};

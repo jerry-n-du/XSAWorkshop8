@@ -1,0 +1,11 @@
+{
+	"welcomeFile": "index.html",
+	"authenticationMethod": "none",
+	"routes": [{
+		"source": "^/euro.xsodata/.*$", 
+		"destination": "apps_be"
+	},{
+         "source": ".*\\.xsjs",
+         "destination": "apps_be"
+    }]
+}
