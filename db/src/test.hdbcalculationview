@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="XSAWorkshop8.db::test" applyPrivilegeType="NONE" dataCategory="DEFAULT" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="test"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="XSAWorkshop8.db::SBOOK">
+    <resourceUri>XSAWorkshop8.db::SBOOK</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="XSAWorkshop8.db::SBOOK">
+  <attributes/>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="100" y="105"/>
+    
+      <rectangleSize width="332"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

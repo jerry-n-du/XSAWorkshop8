@@ -1,0 +1,9 @@
+{
+  "XSAWorkshop8.db::SBOOK": {
+    "target": {
+      "object": "SBOOK",
+      "schema": "SFLIGHT",
+      "database": "HDB"
+    }
+  }
+}

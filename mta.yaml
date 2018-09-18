@@ -6,11 +6,13 @@ modules:
     type: html5
     path: ui
     requires:
+      - name: XSAWorkshop8_uaa
       - name: apps_api
         group: destinations
         properties:
           name: apps_be
           url: '~{url}'
+          forwardAuthToken: true
   - name: apps
     type: nodejs
     path: apps
@@ -19,6 +21,7 @@ modules:
         properties:
           url: '${default-url}'
     requires:
+      - name: XSAWorkshop8_uaa
       - name: hdi_db
       - name: db
   - name: db
@@ -26,6 +29,9 @@ modules:
     path: db
     requires:
       - name: hdi_db
+        properties:
+          TARGET_CONTAINER: ~{hdi-container-name} # defined at (d1)
+      - name: EPM_XXX-table-grantor                  #...for executing grant statement
 resources:
   - name: hdi_db
     parameters:
@@ -34,3 +40,7 @@ resources:
     properties:
       hdi-container-name: '${service-name}'
     type: com.sap.xs.hdi-container
+  - name: XSAWorkshop8_uaa
+    type: com.sap.xs.uaa
+  - name: EPM_XXX-table-grantor
+    type: org.cloudfoundry.existing-service
